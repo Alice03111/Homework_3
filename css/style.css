@@ -484,3 +484,143 @@ footer .linkedin svg {
 a {
 	text-decoration: none;
 }
+
+
+@media(max-width:1250px) {
+	.center{
+		width: 90%;
+	}
+	.container3 p {
+		font-size: 18px;
+		word-spacing: 5px;
+	}
+	.container4 .item{
+		width: 43%;
+		margin: 1.45% 3%;
+	}
+	.container4 .item .item3{
+		margin-left: 70%;
+		width: 80%;
+	}
+	.container5 .img .item_img{
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.container5 .item_img{
+		display: inline-block;
+		width: 10%;
+		margin: 1.5%;
+		height: 249px;
+		background: #e7c70e;
+	}
+	footer span {
+		padding-right: 50%;
+	}
+		
+	
+
+@media(max-width:768px) {
+	.container2 i{
+		width: 80%;
+	}
+	.container4 .item{
+		display: block;
+		width: 50%;
+		margin: 1.45% auto; /*отступы сверху, снизу, а второе авто-по цкнтру*/
+	}
+	.container4 .item .item3{
+		display: block;
+		width: 50%;
+		margin: 1.45% auto; /*отступы сверху, снизу, а второе авто-по цкнтру*/
+	}
+	.container5 .img .item_img{
+		display: block;
+		width: 50%;
+		margin: 1% auto;
+	}
+	.container6 span {
+		font-size: 13px;
+	}
+	.container6 .submit {
+	width: 75px;
+	height: 30px;
+	margin-right: 24%;
+	margin-top: -10px;
+	}
+	.container6 .checkbox {
+		width: 15px;
+		height: 15px;
+		margin-left: 23%;
+	}
+	footer span {
+		padding-right: 36.5%;
+	}
+}
+
+@media(max-width:592px){
+	.container2 h1{
+		font-size: 70px;
+	}
+	footer span {
+		padding-right: 11.3%;
+	}
+}
+
+@media(max-width:425px){
+	.container5 .img .item_img{
+		min-width: 280;
+	}
+	.container6 .submit {
+		margin-right: 40%;
+		margin-top: 8%;
+		}
+		footer {
+			height: 60px;
+		}
+	
+		footer .right {
+			margin-top: 0px;
+		}
+	
+		footer .facebook svg {
+			float: right;
+			padding: 8px 12px 9px 13px;
+			margin-top: 15px;
+		}
+	
+		footer .twitter svg {
+			float: right;
+			padding: 8px 9px 9px 9px;
+			margin-top: 15px;
+		}
+	
+		footer .google_plus svg {
+			float: right;
+			padding: 8px 8px 9px 7px;
+			margin-top: 15px;
+		}
+	
+		footer .linkedin svg {
+			float: right;
+			padding: 8px 10px 9px 11px;
+			margin-top: 15px;
+		}
+	
+		footer span {
+			font-size: 11px;
+			margin-top: 26px;
+		}
+	}
+	
+}
+
+@media(max-width:375px){
+	.container6 .submit {
+		margin-right: 8px;
+	}
+
+	.container5 {
+		height: 1585px;
+	}
+	
+}
