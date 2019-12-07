@@ -83,8 +83,10 @@ header .logo{
 
 .container2{
 	background-image: url('../images/top_background.png');
-	height: 800px;
-	background-size: 100%;
+	height: calc(100vh - 100px);
+	max-height: 800px;
+	background-size: cover; /* гтчего не обрежется*/
+	background-repeat: no-repeat;
 
 }
 
@@ -93,10 +95,10 @@ header .logo{
 	color: #fff;
 	font-weight: bold;
 	text-align: center;
-	padding-top: 220px; /*опустили текст на 220*/
+	padding-top: 20vh; /*опустили текст на 220* относительная высота*/
 }
 
-.container2 i{
+.container2 i {
 	display: block; /*чтобы элемент был блочным*/
 	width: 600px;
 	height: 2px;
@@ -120,7 +122,7 @@ header .logo{
 .container2 .link_top a{
 	color: #fff;
 	font-size: 18px;
-	text-decoration: none; /*удалили полоску с ссылки*/
+	text-decoration: non	e; /*удалили полоску с ссылки*/
 	border: 1px solid #15f4fa;
 	border-radius: 3px; /*закруглили углы*/
 	padding-top: 20px; /*сверху*/
@@ -135,12 +137,18 @@ header .logo{
 	background: #15f4fa;
 } 
 
+.container2 .bottom_link svg {
+	display: block;
+	font-size: 20px;
+	margin: 60px auto auto auto;
+	color: #ffffff;
+}
+
 .container3{
 	background-color:#f6f9f9;
-	height: 360px;
 	background-size: 100%;
-
 }
+
 .container3 h1{
 	font-size: 40px;
 	color: #353c51;
@@ -148,24 +156,22 @@ header .logo{
 	text-align: center;
 	padding-top: 100px; /*опустили текст на 220*/
 }
-.container3 p{
-	font-size: 20px; /*размер  шрифта*/
-	font-family: "Lato";
-	color: #bdbebe;
-	word-spacing: 5px;
+.container3 p {
+	font-size: 20px;
 	text-align: center;
-	padding-top: 30px; /*отступ сверху?*/
-	
+	word-spacing: 6px;
+	color: #999999;
+	padding-top: 30px;
 }
 
   
-
 .container4 .item{
 	display: inline-block; /*чтобы из столбцов стали строкой 3 блока подряд*/
 	width: 30%; /*ширина*/
+	min-width: 300px; /*чтобы железно стоял такой размер, не уменьшалось*/
 	padding-top: 50px;
 	height: 150px;
-	margin: 1.45%; /*появляются отступы между блоками*/
+	margin: 5% 1.45%; /*появляются отступы между блоками*/
 	padding-bottom: 100px;
 }
 
@@ -237,7 +243,8 @@ header .logo{
 }
 
 .container5 {
-	height: 900px;
+	height: 100%;
+	font-weight: 100% ;
 	background-color: #f6f9f9;
 }
 
@@ -258,12 +265,12 @@ header .logo{
 .container5 .img {
 	margin-top: 80px;
 }
-.container5 .item_img{
+.container5 .img .item_img{
     display: inline-block;
     width: 30%;
     margin: 1.5%;
-    min-width: 345px;
-    height: 250px;
+    /* min-width: 345px; */
+    height: 249px;
     background: #15a4fa;
 }
 
@@ -271,17 +278,209 @@ header .logo{
     max-width: 100%;
 }
 
-.container5 .item_img .hover_cart{
-    display: none;
-    height: 250px;
-    width: 100%;
-    background: #2cacf7;
-    position: relative;
-    top: -235px;
-    /* margin-top: -251px; */
-    margin-top: -16px;
+.container5 .item_img .hover_cart {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+	background: rgba(44, 172, 247, 0.9);
+	transition: all 0.7s;
+	opacity: 0;
+	top: -251px;
 }
 
-.container5 .item_img:hover .hover_cart{
-    display: block;
+.container5 .item_img .hover_cart:hover {
+	opacity: 1;
+}
+
+.container5 .item_img .hover_cart .item {
+	width: 100px;
+	height: 45px;
+	position: absolute;
+	z-index: 2;
+	margin: 109px auto auto 133px;
+}
+
+.container5 .item_img .hover_cart .item svg {
+	color: #fff;
+	padding-left: 30px;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	padding: 13px 13px 13px 13px;
+	margin-left: 10%;
+}
+
+
+.container6 {
+	background-image: url('../images/bottom_background.png');
+	height: 700px;
+	background-size: 100%;
+}
+
+.container6 .img-overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(45, 57, 80, 0.9);
+}
+
+.container6 h2 {
+	font-size: 41px;
+	text-align: center;
+	word-spacing: 10px;
+	color: #ffffff;
+	padding-top: 76px;
+}
+
+.container6 p {
+	font-size: 15px;
+	text-align: center;
+	color: #999999;
+	padding-top: 19px;
+}
+
+.container6 .name {
+	outline: 0 !important;
+	display: block;
+	width: 45%;
+	font-size: 15px;
+	padding: 25px 20px 25px 20px;
+	margin-top: 50px;
+	color: #999999;
+	background: rgba(45, 57, 80, 0.0);
+	border: 1px solid #999999;
+	border-radius: 3px;
+	margin: 40px auto;
+}
+
+.container6 .email {
+	outline: 0 !important;
+	display: block;
+	width: 45%;
+	font-size: 15px;
+	padding: 25px 20px 25px 20px;
+	margin-top: 20px;
+	color: #999999;
+	background: rgba(45, 57, 80, 0.0);
+	border: 1px solid #999999;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.container6 .message {
+	outline: none;
+	resize: none;
+	display: block;
+	width: 45%;
+	height: 112px;
+	font-size: 15px;
+	padding: 25px 20px 25px 20px;
+	margin-top: 20px;
+	background: rgba(45, 57, 80, 0.0);
+	border: 1px solid #999999;
+	border-radius: 3px;
+	margin: 40px auto;
+}
+
+.container6 .message:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.container6 .email:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.container6 .name:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.container6 .checkbox {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	padding-right: 5px;
+	margin: 0 auto auto auto;
+	margin-left: 26%;
+}
+
+.container6 span {
+	display: inline-block;
+	position: absolute;
+	font-size: 15px;
+	color: #fff;
+	margin: 0 auto auto 14px;
+}
+
+.container6 .submit {
+	float: right;
+	width: 142px;
+	height: 47px;
+	font-size: 18px;
+	color: #fff;
+	background: rgba(45, 57, 80, 0.0);
+	border: 1px solid #15a4fa;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 26%;
+}
+.container6 .submit:hover {
+	background-color: #15a4fa;
+}
+
+
+footer {
+	
+	background-color: #f6f9f9;
+}
+footer span {
+	font-size: 15px;
+	color: #999999;
+	vertical-align: 13px;
+	padding-right: 70.4%;
+}
+footer .facebook, .twitter, .google_plus, .linkedin, span{
+	display: inline-block;
+}
+footer .facebook svg {
+	font-size: 14px;
+	color: #fff;
+	background-color: #15a4fa;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	padding: 13px 16px 13px 16px;
+	margin: 25px 0px auto auto;
+}
+footer .twitter svg {
+	font-size: 14px;
+	color: #fff;
+	background-color: #15a4fa;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	padding: 13px 13px 13px 13px;
+	margin: 25px 0px auto auto;
+}
+footer .google_plus svg {
+	font-size: 14px;
+	color: #fff;
+	background-color: #15a4fa;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	padding: 13px 11px 13px 12px;
+	margin: 25px 0px auto auto;
+}
+footer .linkedin svg {
+	font-size: 14px;
+	color: #fff;
+	background-color: #15a4fa;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	padding: 13px 14px 13px 14px;
+	margin: 25px auto auto 0px;
+}
+
+a {
+	text-decoration: none;
 }
